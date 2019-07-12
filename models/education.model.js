@@ -1,13 +1,7 @@
 const mongoose = require('mongoose');
+const notEmpty = require('../helpers/notEmpty');
 
 const { Schema } = mongoose;
-
-const notEmpty = degrees => {
-  if (degrees.length === 0) {
-    return false;
-  }
-  return true;
-};
 
 const DegreesSchema = new Schema({
   name: {
