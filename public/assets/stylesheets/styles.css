@@ -1,3 +1,19 @@
-body {
-  background-color: yellow;
+:root {
+  --primary-color: #00838e;
+  --primary-color-light: #4fb3be;
+  --primary-color-dark: #005661;
+
 }
+
+body {
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: var(--primary-color-dark);
+}
+
+.text-center {
+
+}
+
