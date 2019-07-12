@@ -14,8 +14,10 @@ app.use('/', express.static(publicDir));
 
 // Import Routes
 const personalRoutes = require('./routes/personal');
+const educationRoutes = require('./routes/education');
 
 app.use('/api/personal', personalRoutes);
+app.use('/api/education', educationRoutes);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
