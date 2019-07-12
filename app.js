@@ -3,20 +3,26 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
 require('dotenv/config');
 
 const PORT = process.env.PORT || 1337;
+const publicDir = path.join(__dirname, 'public');
 
 app.use(bodyParser.json());
+app.use('/', express.static(publicDir));
 
 // Import Routes
 const personalRoutes = require('./routes/personal');
 
-app.use('/personal', personalRoutes);
+app.use('/api/personal', personalRoutes);
 
-// ROUTES
 app.get('/', (req, res) => {
-  res.send('We are on home');
+  res.sendFile(path.join(publicDir, 'index.html'));
+});
+
+app.get('/api', (req, res) => {
+  res.send('list all api routes');
 });
 
 // Connect to DB
