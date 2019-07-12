@@ -16,10 +16,12 @@ app.use('/', express.static(publicDir));
 const personalRoutes = require('./routes/personal');
 const educationRoutes = require('./routes/education');
 const technologyRoutes = require('./routes/technology');
+const experienceRoutes = require('./routes/experience');
 
 app.use('/api/personal', personalRoutes);
 app.use('/api/education', educationRoutes);
 app.use('/api/technology', technologyRoutes);
+app.use('/api/experience', experienceRoutes);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
