@@ -2,7 +2,6 @@
   --primary-color: #00838e;
   --primary-color-light: #4fb3be;
   --primary-color-dark: #005661;
-
 }
 
 body {
@@ -13,7 +12,43 @@ nav {
   background-color: var(--primary-color-dark);
 }
 
-.text-center {
-
+.api-results {
+  text-align: center;
 }
 
+.api-results-loader {
+  margin-top: 1rem;
+}
+
+.api-results-error {
+  color: #dd6973;
+}
+
+.api-results-error .error-icon {
+  position: relative;
+  top: .25rem;
+  margin: 0 .5rem;
+}
+
+/* MATERIALIZE CSS OVERRIDES */
+pre[class*=language-] {
+    max-height: 50rem;
+    overflow-y: auto;
+}
+
+.tabs {
+  background-color: var(--primary-color-light);
+}
+
+.tabs .tab a {
+color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    color: #ffffff;
+}
+
+.tabs .indicator {
+  background-color: var(--primary-color-dark);
+}

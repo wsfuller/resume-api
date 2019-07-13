@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WSF Resume API</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css"
+      integrity="sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism-tomorrow.min.css"
+      integrity="sha256-xevuwyBEb2ZYh4nDhj0g3Z/rDBnM569hg9Vq6gEw/Sg=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/stylesheets/styles.css" />
   </head>
   <body>
@@ -25,16 +30,143 @@
 
     <section>
       <div class="container">
-        <h4>William S Fuller Resume API</h4>
+        <div class="row center-align">
+          <h4>William S Fuller Resume API</h4>
+        </div>
+        <div class="row">
+          <h4>About</h4>
+          <p>While working at Postman one thing that was super imporant was the power of APIs. I wanted to put together a fun project mainly focused on doing some back end work with NodeJS and MongoDB. What I came up with was the idea of turning my resume into an API.</p>
+          <p>
+            Contained within this API are 4 endpoints:
+            <pre class="language-html">/api/personal</pre>
+            <pre class="language-html">/api/technology</pre>
+            <pre class="language-html">/api/experience</pre>
+            <pre class="language-html">/api/education</pre>
+          </p>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3"><a href="#api-personal">Personal</a></li>
+              <li class="tab col s3"><a href="#api-technology">Technology</a></li>
+              <li class="tab col s3"><a href="#api-experience">Experience</a></li>
+              <li class="tab col s3"><a href="#api-education">Education</a></li>
+            </ul>
+          </div>
+          <div id="api-personal" class="col s12">
+            <div id="personal-results" class="api-results">
+              <div id="personal-results-loader" class="preloader-wrapper big active api-results-loader">
+                <div class="spinner-layer">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="api-technology" class="col s12">
+            <div id="technology-results" class="api-results">
+              <div id="technology-results-loader" class="preloader-wrapper big active api-results-loader">
+                <div class="spinner-layer">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="api-experience" class="col s12">
+            <div id="experience-results" class="api-results">
+              <div id="experience-results-loader" class="preloader-wrapper big active api-results-loader">
+                <div class="spinner-layer">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="api-education" class="col s12">
+            <div id="education-results" class="api-results">
+              <div id="education-results-loader" class="preloader-wrapper big active api-results-loader">
+                <div class="spinner-layer">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Built With</h4>
+          <div class="col s12 m4">Node</div>
+          <div class="col s12 m4">Express</div>
+          <div class="col s12 m4">Heroku</div>
+        </div>
       </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js"
+      integrity="sha256-DIDyRYnz+KgK09kOQq3WVsIv1dcMpTZyuWimu3JMCj8=" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function () {
         $('.parallax').parallax();
+        $('.tabs').tabs();
+
+        var BASE_URL = "https://wsf-resume.herokuapp.com/api/";
+
+        var fetchData = function (endPoint) {
+          $.ajax({
+            type: 'GET',
+            url: BASE_URL + endPoint,
+            dataType: 'json',
+            success(data) {
+              $("#"+endPoint+"-results-loader").fadeOut(500, function(){
+                $("#" + endPoint + "-results").append("<pre class=\"language-json\">" + JSON.stringify(data, null, 2) + "</pre>").fadeIn(500)
+              });
+            },
+            error(err) {
+              $("#" + endPoint + "-results-loader").fadeOut(500, function(){
+                $("#" + endPoint + "-results").append("<div class=\"api-results-error\"><h5><i class=\"material-icons error-icon\">error_outline</i>There was an error fetching data</h5></div").fadeIn(500)
+              });
+              console.log('error: ', err);
+            }
+          });
+        };
+
+
+        fetchData('personal');
+        fetchData('technology');
+        fetchData('experience');
+        fetchData('education');
       });
     </script>
   </body>
