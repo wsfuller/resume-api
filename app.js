@@ -9,6 +9,12 @@ require('dotenv/config');
 const PORT = process.env.PORT || 1337;
 const publicDir = path.join(__dirname, 'public');
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.use(bodyParser.json());
 app.use('/', express.static(publicDir));
 
@@ -28,7 +34,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api', (req, res) => {
-  res.send('list all api routes');
+  res.sendFile(path.join(publicDir, 'api.html'));
 });
 
 // Connect to DB
