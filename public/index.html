@@ -25,140 +25,141 @@
   </head>
   <body>
     <main>
-<nav>
-  <div class="nav-wrapper">
-    <a href="/" class="branding">
-      <img class="logo" src="./assets/images/logo.svg" alt="WSF Logo" />
-      <span class="branding-copy">
-        <div class="copy-name">William S Fuller</div>
-        <div class="copy-title">Front End Engineer</div>
-      </span>
-    </a>
-  </div>
-</nav>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="branding">
+            <img class="logo" src="./assets/images/logo.svg" alt="WSF Logo" />
+            <span class="branding-copy">
+              <div class="copy-name">William S Fuller</div>
+              <div class="copy-title">Front End Engineer</div>
+            </span>
+          </a>
+        </div>
+      </nav>
 
-<div class="parallax-container">
-  <div class="parallax">
-    <div class="hero-overlay">
-      <h1 class="overlay-title">
-        William S Fuller API Resume
-      </h1>
-    </div>
-    <img src="./assets/images/hero.jpg">
-  </div>
-</div>
-<div class="container center-align">
-  Photo by oakie on Unsplash
-</div>
+      <div class="parallax-container">
+        <div class="parallax">
+          <div class="hero-overlay">
+            <h1 class="overlay-title">
+              William S Fuller API Resume
+            </h1>
+          </div>
+          <img src="./assets/images/hero.jpg">
+        </div>
+      </div>
+      <div class="container center-align">
+        Photo by oakie on Unsplash
+      </div>
 
-<section>
-  <div class="container">
-    <div class="row">
-      <h4>About</h4>
-      <p>While working at Postman one thing that was super imporant was the power of APIs. I wanted to put together a
-        fun project mainly focused on doing some back end work with NodeJS and MongoDB. What I came up with was the idea
-        of turning my resume into an API.</p>
-      <p>
-        Contained within this API are 4 endpoints:
-        <pre class="language-html">/api/personal</pre>
-        <pre class="language-html">/api/technology</pre>
-        <pre class="language-html">/api/experience</pre>
-        <pre class="language-html">/api/education</pre>
-      </p>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a href="#api-personal">Personal</a></li>
-          <li class="tab col s3"><a href="#api-technology">Technology</a></li>
-          <li class="tab col s3"><a href="#api-experience">Experience</a></li>
-          <li class="tab col s3"><a href="#api-education">Education</a></li>
-        </ul>
-      </div>
-      <div id="api-personal" class="col s12">
-        <div id="personal-results" class="api-results">
-          <div id="personal-results-loader" class="preloader-wrapper big active api-results-loader">
-            <div class="spinner-layer">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <h4>About</h4>
+            <p>While working at Postman one thing that was super imporant was the power of APIs. I wanted to put together a
+              fun project mainly focused on doing some back end work with NodeJS and MongoDB. What I came up with was the idea
+              of turning my resume into an API.</p>
+            <p>
+              Contained within this API are 4 endpoints:
+              <pre class="language-html">/api/personal</pre>
+              <pre class="language-html">/api/technology</pre>
+              <pre class="language-html">/api/experience</pre>
+              <pre class="language-html">/api/education</pre>
+            </p>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs">
+                <li class="tab col s3"><a href="#api-personal">Personal</a></li>
+                <li class="tab col s3"><a href="#api-technology">Technology</a></li>
+                <li class="tab col s3"><a href="#api-experience">Experience</a></li>
+                <li class="tab col s3"><a href="#api-education">Education</a></li>
+              </ul>
+            </div>
+            <div id="api-personal" class="col s12">
+              <div id="personal-results" class="api-results">
+                <div id="personal-results-loader" class="preloader-wrapper big active api-results-loader">
+                  <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
+            </div>
+            <div id="api-technology" class="col s12">
+              <div id="technology-results" class="api-results">
+                <div id="technology-results-loader" class="preloader-wrapper big active api-results-loader">
+                  <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
+            </div>
+            <div id="api-experience" class="col s12">
+              <div id="experience-results" class="api-results">
+                <div id="experience-results-loader" class="preloader-wrapper big active api-results-loader">
+                  <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="api-education" class="col s12">
+              <div id="education-results" class="api-results">
+                <div id="education-results-loader" class="preloader-wrapper big active api-results-loader">
+                  <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div id="api-technology" class="col s12">
-        <div id="technology-results" class="api-results">
-          <div id="technology-results-loader" class="preloader-wrapper big active api-results-loader">
-            <div class="spinner-layer">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
+          <div class="row">
+            <h4>Built With</h4>
+            <div class="col s12 m4 tool-logo">
+              <img class="responsive-img" src="./assets/images/tools/nodejs.svg" alt="Node.js logo" />
+            </div>
+            <div class="col s12 m4 tool-logo">
+              <img class="responsive-img" src="./assets/images/tools/mongolab.svg" alt="MongoLab logo" />
+            </div>
+            <div class="col s12 m4 tool-logo">
+              <img class="responsive-img" src="./assets/images/tools/heroku.svg" alt="Heroku logo" />
             </div>
           </div>
         </div>
-      </div>
-      <div id="api-experience" class="col s12">
-        <div id="experience-results" class="api-results">
-          <div id="experience-results-loader" class="preloader-wrapper big active api-results-loader">
-            <div class="spinner-layer">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="api-education" class="col s12">
-        <div id="education-results" class="api-results">
-          <div id="education-results-loader" class="preloader-wrapper big active api-results-loader">
-            <div class="spinner-layer">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <h4>Built With</h4>
-      <div class="col s12 m4 tool-logo">
-        <img class="responsive-img" src="./assets/images/tools/nodejs.svg" alt="Node.js logo" />
-      </div>
-      <div class="col s12 m4 tool-logo">
-        <img class="responsive-img" src="./assets/images/tools/mongolab.svg" alt="MongoLab logo" />
-      </div>
-      <div class="col s12 m4 tool-logo">
-        <img class="responsive-img" src="./assets/images/tools/heroku.svg" alt="Heroku logo" />
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </main>
+
     <footer>
       <div class="container">
         <a href="https://williamsfuller.com" class="branding" target="_blank" rel="noopener">
