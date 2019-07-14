@@ -98,12 +98,25 @@ main {
 }
 
 .tool-logo {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .tool-logo img {
   max-width: 200px;
+  max-height: 75px;
+}
+
+.api-tools {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.api-tools img {
+  width: 200px;
 }
 
 footer {
@@ -127,8 +140,6 @@ footer .branding {
 footer .branding:hover {
   opacity: 1;
 }
-
-
 
 footer .logo {
   width: 28px;
