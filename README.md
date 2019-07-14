@@ -9,3 +9,10 @@ Is a project that is focused on doing back end work with Node.js and MongoDB (Mo
 - MongoDB
 - MongoLab
 - Heroku
+
+### Endpoints
+
+- /api/personal
+- /api/technology
+- /api/experience
+- /api/education
