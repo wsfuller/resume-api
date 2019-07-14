@@ -12,7 +12,7 @@ Is a project that is focused on doing back end work with Node.js and MongoDB (Mo
 
 ### Endpoints
 
-- /api/personal
-- /api/technology
-- /api/experience
-- /api/education
+- `/api/personal`
+- `/api/technology`
+- `/api/experience`
+- `/api/education`
