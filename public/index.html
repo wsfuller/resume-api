@@ -168,7 +168,7 @@
 
     <footer>
       <div class="container">
-        <a href="https://williamsfuller.com" class="branding" target="_blank" rel="noopener">
+        <a href="https://wsfuller.dev" class="branding" target="_blank" rel="noopener">
           <img class="logo" src="./assets/images/logo.svg" alt="WSF Logo">
           <span>Built by William S Fuller</span>
         </a>
@@ -195,7 +195,8 @@
             dataType: 'json',
             success(data) {
               $("#"+endPoint+"-results-loader").fadeOut(500, function(){
-                $("#" + endPoint + "-results").append("<pre class=\"language-json\">" + JSON.stringify(data, null, 2) + "</pre>").fadeIn(500)
+                $("#" + endPoint + "-results").append("<pre class=\"language-json\">" + JSON.stringify(data, null,
+                 2) + "</pre>").fadeIn(500)
               });
             },
             error(err) {
