@@ -22,7 +22,9 @@ nav {
 
 .nav-wrapper {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   max-width: 1280px;
   width: 90%;
   margin: auto;
@@ -76,13 +78,13 @@ main {
   justify-content: center;
   position: absolute;
   z-index: 10;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .overlay-title {
   padding: 0 16px;
   color: #ffffff;
-  color: rgba(255,255,255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
 }
 
@@ -101,8 +103,8 @@ main {
 
 .api-results-error .error-icon {
   position: relative;
-  top: .25rem;
-  margin: 0 .5rem;
+  top: 0.25rem;
+  margin: 0 0.5rem;
 }
 
 .tool-logo {
@@ -142,7 +144,7 @@ footer .branding {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.8;
-  transition: opacity .35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }
 
 footer .branding:hover {
@@ -156,9 +158,9 @@ footer .logo {
 }
 
 /* MATERIALIZE CSS OVERRIDES */
-pre[class*=language-] {
-    max-height: 50rem;
-    overflow-y: auto;
+pre[class*='language-'] {
+  max-height: 50rem;
+  overflow-y: auto;
 }
 
 .tabs {
@@ -166,12 +168,12 @@ pre[class*=language-] {
 }
 
 .tabs .tab a {
-color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .tabs .tab a:hover,
 .tabs .tab a.active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .tabs .indicator {
