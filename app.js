@@ -38,8 +38,14 @@ app.get('/api', (req, res) => {
 });
 
 // Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
-  console.log('connected to DB')
-);
+try {
+  mongoose.connect(
+    process.env.DB_CONNECTION,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    () => console.log('connected to DB')
+  );
+} catch (err) {
+  console.log('could not connect to DB');
+}
 
 app.listen(PORT, () => console.log(`Node server is running on ${PORT}`));
